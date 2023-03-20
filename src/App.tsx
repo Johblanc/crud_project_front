@@ -46,7 +46,7 @@ function App() {
             <th scope="col">#</th>
             <th scope="col">Nom</th>
             <th scope="col">Prix</th>
-            <th scope="col">Quantité</th>
+            <th scope="col" className="text-break">Quantité</th>
             <th scope="col">Actions</th>
           </tr>
         </thead>
