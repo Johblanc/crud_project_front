@@ -54,10 +54,10 @@ export function ProductsView(props: {
 
   return (
     <tr>
-      <td>
+      <th scope="row">
         {data.id}
-      </td>
-      <td>
+      </th>
+      <td className="text-break">
         {!inModif && data.nom}
         {inModif && <div>
           <label></label>
@@ -93,14 +93,14 @@ export function ProductsView(props: {
       <td>
         {currentModif === 0 && (
           <div>
-            <button onClick={() => setCurrentModif(data.id!)}>Editer</button>
-            <button onClick={handleDelete}>Supprimer</button>
+            <button className="btn btn-primary m-2" onClick={() => setCurrentModif(data.id!)}>Editer</button>
+            <button className="btn btn-danger m-2" onClick={handleDelete}>Supprimer</button>
           </div>
         )}
         {inModif && (
           <div>
-            <button onClick={handleUpdate}>Modifier</button>
-            <button onClick={() => setCurrentModif(0)}>Annuler</button>
+            <button className="btn btn-primary m-2" onClick={handleUpdate}>Modifier</button>
+            <button className="btn btn-danger m-2" onClick={() => setCurrentModif(0)}>Annuler</button>
           </div>
         )}
       </td>
